@@ -1,4 +1,4 @@
-public class Rice extends Food {
+public class Rice implements Food {
     @Override
     public FoodType getFoodType() {
         return FoodType.GRAIN;
@@ -12,5 +12,14 @@ public class Rice extends Food {
     @Override
     public String getName() {
         return "Rice";
+    }
+
+    @Override
+    public void eat() {
+        if(isGood()){
+            System.out.println("Yum!");
+        } else {
+            System.out.println("Yuck!");
+        }
     }
 }
